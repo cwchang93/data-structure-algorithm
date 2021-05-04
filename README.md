@@ -1,3 +1,41 @@
+# Data Structure and Algorithm Note
+
+## 01. 何謂資料結構
+
+資料：一堆元素所組成的有限集合
+結構：元素間的組成關係
+
+### 01-1. Data Type
+```
+1. a set of data
+2. the operations operations that can be performed on the data
+=> 資料提供的運算方法
+```
+
+### 01-2. ADT (Abstract Data Type)
+```
+抽象資料型態
+1. 資料如何儲存
+2. 資料如何運算
+=> 定義跟實作分開，知道怎麼用但不知道底層如何實作。
+```
+
+### 01-3. JavaScript資料結構
+
+| immutable   | mutable    |
+| ----------- | -------    |
+| 原始型別 |  非原始型別   |
+| Number      | Array      |
+| String      | Object     |
+| Boolean     | Function   |
+| Null        | Date       |
+| Undefined   | Regex      |
+| Symbol      | Construct 建構式  |
+| Boolean     |        |
+
+
+<hr >
+
 ### Linked-List in JS
 
 ```js
