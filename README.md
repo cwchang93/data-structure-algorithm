@@ -96,3 +96,58 @@ arr.sort();
 // [0, 1, 2, 2, 3, 3, 4]
 
 ```
+
+
+## Map & Set
+
+### A. Map要點
+-  類似Object，但Map的key可以是任意資料型態。
+-  map 有依序
+
+#### Map 內建
+1. 創建Map: 兩兩一組，array包array，有點像php
+```js
+let map = new Map([  ['one',2], ['two', 2] ])  
+//Map(2) {"one" => 2, "two" => 2}
+```
+
+2. map中增加一組   map.set(key, val);
+```js
+map.set('three',3);
+// Map(3) {"one" => 2, "two" => 2, "three" => 3}
+```
+
+3. 取得map    map.get(key);
+```js
+map.get('three');  // 3
+```
+
+4. 刪除  map.delete(key);
+```js
+map.delete('three'); // true
+// Map(3) {"one" => 2, "two" => 2}
+```
+
+輸出
+```js
+5. map.keys()  // MapIterator {"one", "two"}
+
+6. map.values()  // MapIterator { 2 , 2 }
+
+7. map.entries90
+```
+
+### B. Set要點
+1. 找交集&聯集，無index 無key
+2. 重複的會被視為唯一值
+3. 無取出來做操作的用法
+4. 多數著重在has，集合資料比對
+
+JS的set有順序，因為是用array實做出來的
+
+
+### C. HashMap
+由key & value 所作成的資料結構。有key跟value就能當作HashMap
+=> Array, Object, Map
+
+
