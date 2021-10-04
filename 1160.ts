@@ -12,9 +12,9 @@ chars 有沒有包含word的所有元素，有的話把該長度累計，求總�
 
  */
 
-
-// Time: O(n^3)
-// Space: O(1)
+// SOL1
+// Time: O(n^2)  loop + indexOf
+// Space: O(1) all premitive
 
 function countCharacters(words: string[], chars: string): number {
     function checkIfGood(word: string, inputChars: string) {
@@ -42,9 +42,9 @@ function countCharacters(words: string[], chars: string): number {
 };
 
 
-
+// SOL 2
 // Time: O(n^3)
-// Space: O(n)
+// Space: O(1) all premitive
 
 // function countCharacters(words: string[], chars: string): number {
 //     let countSum = 0;
