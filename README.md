@@ -3,8 +3,9 @@
 ### 01. 何謂資料結構
 
 資料：一堆元素所組成的有限集合  
-結構：元素間的組成關係 
-有時候會用Collection或Container 來描述資料結構
+結構：元素間的組成關係
+有時候會用 Collection 或 Container 來描述資料結構
+
 ### 01-1. Data Type
 
 ```
@@ -38,29 +39,34 @@
 <hr >
 
 ### 01-4. 演算法
+
 Def: 在有限時間內，完成特定功能之有限個指令之集合，按部就班解決一個問題的方法。
+
 - 目的是提升時間複雜度
 - 一般的『流程控制』是透過條件與迴圈定義城市的運作而演算法則是更有效率地控制流程
 
-| 經典演算法            | 常用解題技巧       |
-| ------------------- | ---------------- |
-| Search & Sort       | Two Pointer      |
-| Recursion           | Sliding window   |
-| Backtracking        | Merge Intervals  |
-| Greedy              | Cyclic Sort      |
-| Divide and Conquer  | Subsets          |
-| Dynamic Programming | Top-K Elements   |
+| 經典演算法          | 常用解題技巧    |
+| ------------------- | --------------- |
+| Search & Sort       | Two Pointer     |
+| Recursion           | Sliding window  |
+| Backtracking        | Merge Intervals |
+| Greedy              | Cyclic Sort     |
+| Divide and Conquer  | Subsets         |
+| Dynamic Programming | Top-K Elements  |
 
 ### Linked-List in JS
-node跟node所組成的結構
 
-### Linked-List種類
+node 跟 node 所組成的結構
+
+### Linked-List 種類
+
 1. Simple Linked List：單向的 Linked List 會包含兩個值目前節點的值，和指向下個節點的連結
 2. Doubly Linked List：雙向的 Linked List 會包含三個值：目前節點的數值、向後的節點連結、向前的節點連結
 3. Circular Linked List：
+
 - Singly linked list: 最後一個 node 往後，會到第一個 node 。
 - Doubly Linked List: 最後一個 node 往後，會到第一個 node ；第一個 node 往前，則會到最後一個 node
- 
+
 ```js
 // ES5 function 實現
 function ListNode(var) {
@@ -97,27 +103,27 @@ class LinkedList {
 ```
 
 ## Linked List & Array 區別
-|         | Linked List | Array          |
-|---------| --------- | -------- |
-|記憶體   | 不需要連續的記憶體空間  | 連續的記憶體空間       |
-|節點型態 | 各 node 形態不同      |	各 node 形態相同          |
-|空間配置 | 不需預留空間	      | 需事先宣告連續空間|
-|資料插入/刪除| 在已知位置的情況下，插入/刪除一個 item 需 O(1)(實務上完成插入刪除，需要經過「搜尋 O(n)」和「插入刪除 O(1)」)   | 插入/刪除皆為 O(n)         |
-|資料查詢 | 從頭找起 O(n)，速度慢      | 	隨機存取 index O(1)，速度快 |
-|額外指標空間 | 需要額外 pointer 空間 | 不需要            |
-|適用時機	| a. 無法預期資料數量時，使用 linked list 會沒有 resize 問題 <br>b. 需要頻繁新增/刪除資料時 <br>c. 不需要快速查資料    | a. 希望快速存取資料<br> b. 已知欲處理的資料數量，便能確認矩陣的大小<br>c. 要求記憶體空間的使用越少越好 |
 
+|               | Linked List                                                                                                       | Array                                                                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| 記憶體        | 不需要連續的記憶體空間                                                                                            | 連續的記憶體空間                                                                                       |
+| 節點型態      | 各 node 形態不同                                                                                                  | 各 node 形態相同                                                                                       |
+| 空間配置      | 不需預留空間                                                                                                      | 需事先宣告連續空間                                                                                     |
+| 資料插入/刪除 | 在已知位置的情況下，插入/刪除一個 item 需 O(1)(實務上完成插入刪除，需要經過「搜尋 O(n)」和「插入刪除 O(1)」)      | 插入/刪除皆為 O(n)                                                                                     |
+| 資料查詢      | 從頭找起 O(n)，速度慢                                                                                             | 隨機存取 index O(1)，速度快                                                                            |
+| 額外指標空間  | 需要額外 pointer 空間                                                                                             | 不需要                                                                                                 |
+| 適用時機      | a. 無法預期資料數量時，使用 linked list 會沒有 resize 問題 <br>b. 需要頻繁新增/刪除資料時 <br>c. 不需要快速查資料 | a. 希望快速存取資料<br> b. 已知欲處理的資料數量，便能確認矩陣的大小<br>c. 要求記憶體空間的使用越少越好 |
 
 ### 參考資料
-<a href="http://alrightchiu.github.io/SecondRound/linked-list-introjian-jie.html">1. Linked List: Intro(簡介)</a> 
+
+<a href="http://alrightchiu.github.io/SecondRound/linked-list-introjian-jie.html">1. Linked List: Intro(簡介)</a>
 <a href="https://www.geeksforgeeks.org/reverse-a-linked-list/">Reverse a LinkedList</a>
 
-
 ## Tree
+
 Tree 就是非線性的 Linked-List，也就是每個節點都會有兩個往下的選擇，一個往左延伸、另一個往右延伸
 
 ## Map & Set
-
 
 ### A. Map 要點
 
@@ -173,6 +179,7 @@ map.delete("three"); // true
 - 無取出來做操作的用法(Set 為最小運算單位)
 - 多數著重在 has，集合資料比對
 - 加入新元素時，Set 內部會用===來判斷是否有重複值，NaN 會被判斷為重複值(雖然 NaN !== NaN)
+- JS 的 set 有順序
 
 ```js
 const setA = new Set();
@@ -203,9 +210,9 @@ Hash function
 Object: key
 Array: index
 
-### String & Array的差別
-都基於index 
-String => immutable  可比較
+### String & Array 的差別
 
-Array => mutable   可排序，不能比較
+都基於 index
+String => immutable 可比較
 
+Array => mutable 可排序，不能比較

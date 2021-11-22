@@ -7,18 +7,39 @@ class ListNode {
     }
 }
 
-function reverseList(head: ListNode | null): ListNode | null {
+function reverseList(head: ListNode | null, previous: ListNode | null): ListNode | null {
     if (head === null) return null;
-    if (head.next === null) return head;
-    let prev = null, next = null;
+
+    let prev = previous || null;
+    let next;
+
+    next = head.next;
+    head.next = prev;
+    prev = head;
+    head = next;
+
+    return reverseList(head, prev);
+
+};
+
+// reverseList([1, 2, 3, 4, 5])
+
+var reverseList = function (head) {
+
+    if (!head) return head;
+
+    let prev = null;
+    let next;
+
     while (head) {
         next = head.next;
         head.next = prev;
         prev = head;
         head = next;
+
     }
     return prev;
+
 };
 
-reverseList([1, 2, 3, 4, 5])
 
