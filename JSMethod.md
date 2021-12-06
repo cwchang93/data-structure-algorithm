@@ -14,22 +14,6 @@ arr.sort();
 // [0, 1, 2, 2, 3, 3, 4]
 ```
 
-## delete specific element in array
-
-```js
-const array = [2, 5, 9];
-
-console.log(array);
-
-const index = array.indexOf(5);
-if (index > -1) {
-  array.splice(index, 1);
-}
-
-// array = [2, 9]
-console.log(array);
-```
-
 ## 把 Map 當作 Array 來使用
 
 ```js
@@ -50,4 +34,18 @@ Array.from(mapper.values());
 
 Array.from(mapper.keys());
 // ['1', '2'];
+```
+
+## for & forEach 差別
+
+1. for - 用 var 會在全域產生變數
+2. for 可以被中斷
+
+```js
+// 若for 用var 會在全域產生變數
+for (var i = 0; i < array.length; i++) {
+  const item = array[i];
+  console.log(i, item);
+}
+console.log(i); // 4
 ```

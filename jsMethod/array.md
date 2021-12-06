@@ -1,9 +1,10 @@
 # JS Array 方法
 
-## 新增＆移除 JS element
+## A. 新增＆移除 JS element
 
 - 會改變原本的 Array
-- return  要點=> 拿掉 element 會 return element，新增 element 會 return 新的長度。
+- return  什麼東西？ <br>
+  -> 要點=> 拿掉 element 會 return element，新增 element 會 return 新的長度。
 
 1. 加到最後面(push)
 
@@ -27,8 +28,26 @@ frutis = ["banana", "apple", "peach"];
 
 4. 刪除最前面(shift)
 
-5. 拼接特定位置的項目(splice)
-   array.splice(特定 index, 該(index 開始)要拼接的數量)
+5. 刪除 Array 中的特定元素
+
+```js
+const array = [2, 5, 9];
+
+console.log(array);
+
+const index = array.indexOf(5);
+if (index > -1) {
+  array.splice(index, 1);
+}
+
+// array = [2, 9]
+console.log(array);
+```
+
+## B. 拼接
+
+拼接特定位置的項目(splice)
+array.splice(特定 index, 該(index 開始)要拼接的數量)
 
 ```js
 const fruits = ["Apple", "Banana", "Kiwi"];
@@ -36,7 +55,7 @@ fruits.splice(1, 1); // ['Banana']
 // 指從index 1 ("Banana") 開始取1個
 ```
 
-## 找元素的位置
+## C. 找元素的位置
 
 ### indexOf
 
@@ -57,20 +76,6 @@ fruits[5] = "fruit";
 // ['Strawberry', 'Banana', 'Mango', empty × 2, 'fruit']
 ```
 
-## for & forEach 差別
-
-1. for - 用 var 會在全域產生變數
-2. for 可以被中斷
-
-```js
-// 若for 用var 會在全域產生變數
-for (var i = 0; i < array.length; i++) {
-  const item = array[i];
-  console.log(i, item);
-}
-console.log(i); // 4
-```
-
 ## Arguments
 
 ```js
@@ -79,4 +84,13 @@ function fn() {
 }
 
 fn("a", "b", "c", "d");
+```
+
+## 合併兩個 Array
+
+```js
+const array1 = ["a", "b", "c"];
+const array2 = ["d", "e", "f"];
+
+array1.concat(array2); // ['a','b','c','d','e','f'];
 ```

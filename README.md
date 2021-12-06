@@ -128,7 +128,7 @@ Tree 就是非線性的 Linked-List，也就是每個節點都會有兩個往下
 ### A. Map 要點
 
 - 類似 Object，但 Map 的 key 可以是任意資料型態。
-- map 有依序
+- Map 有依序
 
 #### Map 內建
 
@@ -216,3 +216,44 @@ Array: index
 String => immutable 可比較
 
 Array => mutable 可排序，不能比較
+
+---
+
+## Recursive 遞迴
+
+如果一個 function 重新呼叫自己，就稱為遞迴
+
+<a href="https://www.youtube.com/watch?v=t4MSwiqfLaY&t=24s">Recursion CS50</a>
+
+```js
+function foo(parameters) {
+  if (Base Case)
+    return 結果
+  else
+    General Case ( foo() )
+}
+```
+
+### Recursion & Iteration 比較
+
+| 項目            | Recursion  | Iteration                |
+| --------------- | ---------- | ------------------------ |
+| 程式碼          | 精簡       | 冗長                     |
+| 區域暫存變數    | 少         | 少                       |
+| 程式執行時間    | 長(無效率) | 短 (甭額外處理 push/pop) |
+| 額外 Stack 支持 | 需要       | 不需要                   |
+
+### 常見 Recursion 題型
+
+- "Design an algorithm to compute the nth..."
+- "Write code to list the first nth..."
+- "Write code to define base case"
+- "Implement a method to compute all..."
+
+---
+
+- Factorial 階乘
+- GCD 最大公因數
+- Fibonacci 費氏數列
+- 河內塔
+- Permutations 排列組合
