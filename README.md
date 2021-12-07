@@ -123,6 +123,55 @@ class LinkedList {
 
 Tree 就是非線性的 Linked-List，也就是每個節點都會有兩個往下的選擇，一個往左延伸、另一個往右延伸
 
+### JS 實作 Tree
+
+Tree 右邊要·比左邊大
+<img src="./img/tree-concept.jpg">
+
+#### Example 1
+
+```js
+function TreeNode(val) {
+  this.val = val;
+  this.left = this.right = null;
+}
+
+// 1-> 2 -> 3
+const root = new TreeNode(1);
+const root_right = new TreeNode(2);
+const root_right_left = new TreeNode(3);
+
+root.right = root_right;
+root.left = root_right_left;
+```
+
+#### Example 2
+
+```js
+// 2 -> 7 -> 9
+
+const root = new Tree(2);
+const secondRoot = new Tree(7);
+const thirdRoot = new Tree(9);
+
+root.right = secondRoot;
+root.left = thirdRoot;
+```
+
+三種常見的 Tree
+原則:依照 root 輸出順序不同來決定(非 root 都是左->右)
+
+1. In-order traversal
+   輸出順序由小到大(左中右)
+
+2. Pre-order traversal
+   先輸出 root (中左右)
+
+3. Post-order traversal
+   最後輸出 root(左右中)
+
+Tree 實作
+
 ## Map & Set
 
 ### A. Map 要點
@@ -244,6 +293,8 @@ function foo(parameters) {
 | 額外 Stack 支持 | 需要       | 不需要                   |
 
 ### 常見 Recursion 題型
+
+KEY: 寫 Recursion 一定要 return function
 
 - "Design an algorithm to compute the nth..."
 - "Write code to list the first nth..."
