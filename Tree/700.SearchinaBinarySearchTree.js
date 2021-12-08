@@ -11,6 +11,11 @@
  * @param {number} val
  * @return {TreeNode}
  */
+
+// time O(log N)
+// Space: O(log N)
+
+// Recursive
 var searchBST = function(root, val) {
 
     if (root == null) {
@@ -27,6 +32,36 @@ var searchBST = function(root, val) {
 
 };
 
+// Iteration 
+var searchBST = function(root, val) {
+    while (root.val != null) {
+        if (root.val == val)
+            return root
+        else if (val < root.val)
+            root = root.left
+        else
+            root = root.right
+    }
+    return false
+};
+
+// Stack
+var searchBST = function(root, val) {
+    if (!root) return root;
+    const stack = [root];
+    while (stack.length) {
+        const node = stack.pop();
+        if (node.val === val) return node;
+        if (node.val > val) {
+            if (node.left) stack.push(node.left);
+        } else {
+            if (node.right) stack.push(node.right);
+        }
+    }
+    return null;
+};
+
+
 // var searchBST = function(root, val) {
 
 //     if (root.val === val) return root;
@@ -42,28 +77,4 @@ var searchBST = function(root, val) {
 //     }
 
 //     return helper(root);
-
-
 // };
-
-
-var searchBST = function(root, val) {
-
-    if (root == null) {
-        return null;
-    }
-
-
-
-    if (root.val == val) {
-        return root;
-    }
-
-    if (root.val > val) {
-        return searchBST(root.right, val);
-    }
-
-    // if (root.val < val) searchBST(root.right, val);
-
-    return searchBST(root.right, val)
-};

@@ -172,6 +172,9 @@ root.left = thirdRoot;
 
 Tree 實作
 
+AVT: 平衡樹
+RBT: 紅黑樹
+
 ## Map & Set
 
 ### A. Map 要點
@@ -308,3 +311,17 @@ KEY: 寫 Recursion 一定要 return function
 - Fibonacci 費氏數列
 - 河內塔
 - Permutations 排列組合
+
+### 資料結構 總結
+
+愈簡單的概念，解法愈多，變化愈多
+愈複雜的概念，解法愈少，變化愈少
+
+Tree 的彈性比較少，基本上就 Iteration & Recursion
+
+### 建 Index 方法
+
+- B+ Tree
+- Hashing
+- Bitmap
+- Reverse Index
