@@ -34,7 +34,6 @@
 | Null      | Date             |
 | Undefined | Regex            |
 | Symbol    | Construct 建構式 |
-| Boolean   |                  |
 
 <hr >
 
@@ -101,6 +100,8 @@ class LinkedList {
 }
 
 ```
+
+---
 
 ## Linked List & Array 區別
 

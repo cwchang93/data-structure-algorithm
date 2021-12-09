@@ -49,3 +49,7 @@ for (var i = 0; i < array.length; i++) {
 }
 console.log(i); // 4
 ```
+
+## String & Array 轉 array 通吃的方法
+
+[...param]
