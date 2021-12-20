@@ -18,31 +18,61 @@ Sol2: O(n);Math.max(...<array>)
  * 
  */
 
+// function thirdMax(nums: number[]): number {
+
+//     const uniqueArr = [...new Set(nums)];
+//     if (uniqueArr.length === 3) {
+//         return Math.min(...uniqueArr);
+//     } else if (uniqueArr.length<3) { 
+//         return Math.max(...uniqueArr);
+//     } else {
+//         let tmpMax = Math.max(...uniqueArr);
+//         uniqueArr.forEach((eachNum,i)=>{
+//             if (eachNum === tmpMax){
+//                 uniqueArr[i] = Math.min(...uniqueArr);
+//             }
+//         })
+//         tmpMax = Math.max(...uniqueArr);
+//         uniqueArr.forEach((eachNum,i)=>{
+//             if (eachNum === tmpMax){
+//                 uniqueArr[i] = Math.min(...uniqueArr);
+//             }
+//         });
+//         // console.log(uniqueArr);
+//         return Math.max(...uniqueArr);
+
+//     }
+
+// };
+
+
 function thirdMax(nums: number[]): number {
+    let first = nums[0];
+    let second = -Infinity;
+    let third = -Infinity;
 
-    const uniqueArr = [...new Set(nums)];
-    if (uniqueArr.length === 3) {
-        return Math.min(...uniqueArr);
-    } else if (uniqueArr.length<3) { 
-        return Math.max(...uniqueArr);
-    } else {
-        let tmpMax = Math.max(...uniqueArr);
-        uniqueArr.forEach((eachNum,i)=>{
-            if (eachNum === tmpMax){
-                uniqueArr[i] = Math.min(...uniqueArr);
-            }
-        })
-        tmpMax = Math.max(...uniqueArr);
-        uniqueArr.forEach((eachNum,i)=>{
-            if (eachNum === tmpMax){
-                uniqueArr[i] = Math.min(...uniqueArr);
-            }
-        });
-        // console.log(uniqueArr);
-        return Math.max(...uniqueArr);
+    console.log(...nums);
 
+    if (nums.length < 3) return Math.max(...nums);
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === first || nums[i] === second || nums[i] === third) continue;
+
+        if (nums[i] > first) {
+            third = second;
+            second = first;
+            first = nums[i];
+        } else if (nums[i] > second) {
+            third = second;
+            second = nums[i];
+        } else if (nums[i] > third) {
+            third = nums[i];
+        }
     }
+    return third === -Infinity ? first : third;
+}
 
-};
-
-thirdMax([1,2,3,4,5,5,10,-11])
+console.log(
+    thirdMax([3, 2, 2, 1])
+)
+// thirdMax([1, 2, 3, 4, 5, 5, 10, -11])
