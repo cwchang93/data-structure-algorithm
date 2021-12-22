@@ -53,3 +53,12 @@ console.log(i); // 4
 ## String & Array 轉 array 通吃的方法
 
 [...param]
+
+## 箭頭函式不能直接取 arguments
+
+```js
+const test2 = () => {
+  console.log(arguments);
+};
+test2(); // Uncaught Reference Error
+```

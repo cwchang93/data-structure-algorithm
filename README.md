@@ -171,10 +171,29 @@ root.left = thirdRoot;
 3. Post-order traversal
    最後輸出 root(左右中)
 
+4. Level-order traversal [廣度優先] <br>
+   上到下一層一層的找
+
 Tree 實作
 
 AVT: 平衡樹
 RBT: 紅黑樹
+
+### Binary Search Tree 的時間複雜度
+
+why 是 O(log n) 不是 O(n/2)?
+因為每切一次就是(n/2)，而無限次下去就會是(n/2)^n => 就會是(n/2)^m => log n
+
+這樣理解！
+
+```
+每次搜尋都會把資料量砍半(除以2)，砍了x次後會剩下一筆資料，也就是我們搜尋目標。數學上可以這樣寫：
+n = 資料總筆數
+x = 要做幾次 (時間複雜度)
+n / 2^x = 1
+n = 2^x
+x = log n
+```
 
 ## Map & Set
 
