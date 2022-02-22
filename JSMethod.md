@@ -62,3 +62,11 @@ const test2 = () => {
 };
 test2(); // Uncaught Reference Error
 ```
+
+## Object.assign vs spread Operator
+
+```js
+const original = { a: 1, b: 2 };
+
+const { a, ...noA } = { ...original, c: 3 };
+```

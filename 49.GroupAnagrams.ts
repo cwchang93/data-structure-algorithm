@@ -22,8 +22,9 @@ function groupAnagrams(strs: string[]): string[][] {
     }
     return mainArr;
 
-
 };
+
+
 
 console.log(
     groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
