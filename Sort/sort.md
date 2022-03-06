@@ -1,4 +1,11 @@
 # Sort 
+
+## 經過排序後的資料
+- 容易閱讀
+- 更容易統計或整理
+- 大幅減少資料搜尋 (searching) 的時間
+
+
 ## Why need sorting?
 When data becomes huge, efficient searching is necessary. Therefore, if data was sorted in advanced, it would be helpful for searching. 
 

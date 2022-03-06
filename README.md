@@ -196,10 +196,19 @@ x = log n
 ```
 
 ## Map & Set
+Map & Set 關聯性
+創建Map之後，開始可以使用set方法
+```js
+const rest = new Map();
+
+rest.set('a','abc');  //  Map(1) {'a' => 'abc'}
+
+
+```
 
 ### A. Map 要點
 
-- 類似 Object，但 Map 的 key 可以是任意資料型態。
+- 類似 Object，但 Map 的 key 可以是任意資料型態。(Obj 只允許string)
 - Map 有依序
 
 #### Map 內建
@@ -269,6 +278,8 @@ Set 用法
 1. set.add(1);
 2. set.delete(1);
 3. set.has(1);
+4. set.clear();
+5. set.size();  
 
 ```
 
