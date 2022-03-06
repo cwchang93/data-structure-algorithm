@@ -1,13 +1,13 @@
 /**
- * 
- * @param words 
+ *
+ * @param words
  * Input: words = ["cat","bt","hat","tree"], chars = "atach"
 Output: 6
-Explanation: 
+Explanation:
 The strings that can be formed are "cat" and "hat" so the answer is 3 + 3 = 6.
- * @param chars 
+ * @param chars
 
-RePhrase: 
+RePhrase:
 chars 有沒有包含word的所有元素，有的話把該長度累計，求總累計數值。
 
  */

@@ -44,7 +44,7 @@ if (index > -1) {
 console.log(array);
 ```
 
-## B. 拼接
+## B. 刪取
 
 拼接特定位置的項目(splice)
 array.splice(特定 index, 該(index 開始)要拼接的數量)
@@ -53,6 +53,15 @@ array.splice(特定 index, 該(index 開始)要拼接的數量)
 const fruits = ["Apple", "Banana", "Kiwi"];
 fruits.splice(1, 1); // ['Banana']
 // 指從index 1 ("Banana") 開始取1個
+```
+
+## 擷取 Slice
+
+```js
+const fruits = ["Apple", "Banana", "Kiwi", "Pie", "fruit", "grape"];
+
+// 取index 1-3(不含)
+fruits.slice(1, 3); //  ['Banana', 'Kiwi']
 ```
 
 ## C. 找元素的位置
